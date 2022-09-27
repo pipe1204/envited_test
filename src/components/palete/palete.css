@@ -1,0 +1,29 @@
+.palete__content {
+    margin: 3rem 0;
+}
+
+.palete__colors__content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.palete__info {
+    margin: 1rem 2rem;
+}
+
+.palete__info ul {
+    margin-left: 20px;
+}
+
+.palete__info h2, ul {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.subtitle {
+    color: #4F4F4F;
+    font-size: 18px;
+    font-weight: 600;
+}

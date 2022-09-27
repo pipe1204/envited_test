@@ -1,0 +1,9 @@
+.phone__content img {
+    width: 100%;
+}
+
+@media screen and (max-width: 550px) {
+    .phone__content img {
+        width: 70%;
+    }
+}

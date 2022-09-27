@@ -1,0 +1,16 @@
+.color__content {
+    margin: 1rem 2rem;
+}
+
+.color__box {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.color__code {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 7px;
+}

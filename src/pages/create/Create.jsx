@@ -3,15 +3,16 @@ import Typewriter from 'typewriter-effect';
 import FormInput from '../../components/formInput/FormInput'
 import "./create.css"
 import { Link } from 'react-router-dom';
+import EnvitedEvent from '../event/EnvitedEvent';
 
 const Create = () => {
 
     const [eventDetails, setEventDetails] = useState({
-        eventName: "",
-        hostName: "",
+        eventname: "",
+        hostname: "",
         place: "",
-        startDate: "",
-        endDate: "",
+        startdate: "",
+        enddate: "",
         photo: ""
     })
 
@@ -59,43 +60,62 @@ const Create = () => {
             label: "Event Photo"
         },
     ]
+    const [isFormVisible, setIsFormVisible] = useState(true)
+    const [showNext, setShowNext] = useState(false)
 
     function handleSubmit(e) {
         e.preventDefault()
+        setShowNext(true)
     }
 
     const onChange = (e) => {
         setEventDetails({...eventDetails, [e.target.name]: e.target.value })
     }
 
-    console.log(eventDetails)
+    function handleNext() {
+        setIsFormVisible(false)
+        setShowNext(false)
+    }
+
+    
 
   return (
-    <div className='form__content'>
-        <div className='heading__content'>
-            <h1 className='form__main__heading'>Invite friends to your</h1><h1 className='gradient__text'><Typewriter
-                options={{
-                    strings: ['House warming party', 'Graduation party', 'Farewell party', 'Birthday party', 'Australian Day party', 'Hens party', 'Babyshower'],
-                    autoStart: true,
-                    loop: true,
-                    delay: 75
-                }}
-            /></h1>
+    <>
+        <div className={isFormVisible ? 'form__content' : "hide__form"}>
+            <div className='heading__content'>
+                <h1 className='form__main__heading'>Invite friends to your</h1><h1 className='gradient__text'><Typewriter
+                    options={{
+                        strings: ['House warming party', 'Graduation party', 'Farewell party', 'Birthday party', 'Australian Day party', 'Hens party', 'Babyshower'],
+                        autoStart: true,
+                        loop: true,
+                        delay: 75
+                    }}
+                /></h1>
+            </div>
+            <form className="gradient__background__2" onSubmit={handleSubmit}>
+            {
+                inputs.map((input) => (
+                    <FormInput 
+                        key={input.id} 
+                        {...input} 
+                        value={eventDetails[input.name]}
+                        onchange={onChange}
+                    />
+                ))
+            }
+            <button className={showNext ? "hide__event" : 'create__event__button'}>🥳 Create</button>
+            <div className={showNext ? "sucessful__message__content" : "hide__event"}>
+                <h2 className='gradient__text'>You have created your event! 🎉</h2>
+            </div>
+            </form>
+        </div> 
+        <div className={showNext ? "next__button__content" : "hide__event"}>
+            <button className='create__event__button' onClick={handleNext}>🥳 Next</button>
         </div>
-        <form className="gradient__background__2" onSubmit={handleSubmit}>
-        {
-            inputs.map((input) => (
-                <FormInput 
-                    key={input.id} 
-                    {...input} 
-                    value={eventDetails[input.name]}
-                    onchange={onChange}
-                />
-            ))
-        }
-        </form>
-        <Link to="/events"><button className='create__event__button'>🥳 Next</button></Link>
-    </div>
+        <div className={isFormVisible ? "hide__event" : ""}>
+            <EnvitedEvent data={eventDetails}/>
+        </div>
+    </>
   )
 }
 

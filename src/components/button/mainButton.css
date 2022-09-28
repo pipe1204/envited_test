@@ -15,10 +15,11 @@
     color: white;
     margin-top: 50px;
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
 }
 
 .main__button:hover {
-    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
 }
 
 .main__button:focus {

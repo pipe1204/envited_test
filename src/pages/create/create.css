@@ -4,7 +4,15 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
+}
+
+.hide__form {
+    display: none;
+}
+
+.hide__event {
+    display: none;
 }
 
 .heading__content {
@@ -54,6 +62,19 @@ form {
   
 .create__event__button:active {
     box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.next__button__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sucessful__message__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 550px) {

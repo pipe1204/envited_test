@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    min-height: 100vh;
     padding: 0 160px;  
     margin-top: 100px; 
 }
@@ -65,9 +64,28 @@
   }
 
   @media screen and (max-width: 550px) {
+    .event__content {
+        margin: 0;
+    }
+    
     .event__content__header h1 {
         font-size: 28px;
         line-height: 32px;
+    }
+
+    .event__content__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .event__content__details h2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 14px;
     }
 
     .event__image img {

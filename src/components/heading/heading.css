@@ -59,7 +59,7 @@
   @media screen and (max-width: 550px) {
 
     .heading__container {
-        margin: 55px 0;
+        margin: 25px 0;
         width: 100%;
     }
     
@@ -83,5 +83,9 @@
         line-height: 18px;
         text-align: center;
         width: 100%;
+    }
+
+    .desktop__button {
+        display: none;
     }
   }

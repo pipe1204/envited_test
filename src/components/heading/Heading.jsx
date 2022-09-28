@@ -9,7 +9,9 @@ const Heading = () => {
         <div className='info__content'>
             <h1 className="main__heading">Imagine if <span className='gradient__text'>Snapchat</span> had events.</h1>
             <p>Easily host and share events with your friends across any social media</p>
-            <Link to="/events"><MainButton /></Link>
+            <div className='desktop__button'>
+            <Link to="/create"><MainButton /></Link>
+            </div>
         </div>
     </div>
   )

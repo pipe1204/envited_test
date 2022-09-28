@@ -2,8 +2,8 @@
 import './App.css'
 import Landing from './pages/landing/Landing'
 import EnvitedEvent from './pages/event/EnvitedEvent'
-import Colors from './pages/colors/Colors'
 import { Routes, Route, Link } from "react-router-dom";
+import Create from './pages/create/Create';
 
 function App() {
   
@@ -13,8 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />}/>
         <Route path="/events" element={<EnvitedEvent />}/>
-        <Route path="/colors" element={<Colors />}/>
-        
+        <Route path="/create" element={<Create />}/>
       </Routes>
     </div>
   )

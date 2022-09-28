@@ -1,0 +1,23 @@
+
+.form__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+input {
+    padding: 18px;
+    margin: 1rem 3rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+    width: 100%;
+}
+
+label {
+    color: var(--color-subtext);
+    font-weight: 700;
+}

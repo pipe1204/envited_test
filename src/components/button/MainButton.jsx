@@ -1,8 +1,8 @@
 import "./mainButton.css"
 
-const MainButton = () => {
+const MainButton = ({text}) => {
   return (
-    <button className='main__button gradient__background'>🎉 Create my event</button>
+    <button className='main__button gradient__background'>{text}</button>
   )
 }
 

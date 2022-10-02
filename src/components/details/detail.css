@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 15px 0;
-    cursor: pointer;
+    width: 100%;
 }
 
 .detail__main__info {
@@ -29,6 +29,7 @@
     font-size: 18px;
     line-height: 21px;
     color: #240D57;
+    margin-bottom: 5px;
 }
 
 .subtitle {

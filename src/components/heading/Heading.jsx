@@ -10,7 +10,7 @@ const Heading = () => {
             <h1 className="main__heading">Imagine if <span className='gradient__text'>Snapchat</span> had events.</h1>
             <p>Easily host and share events with your friends across any social media</p>
             <div className='desktop__button'>
-            <Link to="/create"><MainButton /></Link>
+            <Link to="/create"><MainButton text="🎉 Create my event"/></Link>
             </div>
         </div>
     </div>

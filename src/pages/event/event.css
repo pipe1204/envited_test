@@ -37,6 +37,28 @@
     font-weight: 700;
 }
 
+.event__content__deatils__info {
+    width: 100%;
+}
+
+.share__button__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social__icons__content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.social__icons__content img {
+    width: 50px;
+}
+
 @media screen and (max-width: 850px) {
     .event__content {
       flex-direction: column;

@@ -90,4 +90,8 @@ form {
         font-size: 30px;
         line-height: 34px;
     }
+
+    .input__content {
+        margin: 0;
+    }
 }

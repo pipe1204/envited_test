@@ -21,3 +21,7 @@ label {
     color: var(--color-subtext);
     font-weight: 700;
 }
+
+@media screen and (max-width: 550px) {
+    
+}
